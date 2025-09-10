@@ -1,0 +1,42 @@
+@Catalog_HostAddress = https://localhost:7263/products
+
+GET {{Catalog_HostAddress}}/
+Accept: application/json
+
+###
+
+GET {{Catalog_HostAddress}}/1
+Accept: application/json
+
+###
+
+POST {{Catalog_HostAddress}}/
+Content-Type: application/json
+{
+  "id":10,
+  "name":"New Product",
+  "description":"This is a new product",
+  "price":99.99,
+  "imageUrl":"https://example.com/new-product.jpg"
+}
+
+###
+PUT {{Catalog_HostAddress}}/10
+Content-Type: application/json
+{
+  "name":"Update Product",
+  "description":"This is a update product",
+  "price":99.99,
+  "imageUrl":"https://example.com/new-product.jpg"
+}
+
+###
+
+DELETE {{Catalog_HostAddress}}/10
+Accept: application/json
+
+###
+### Support AI
+
+GET {{Catalog_HostAddress}}/support/give-me-1-outdoor-activity
+Accept: application/json
